@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>460</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Manage</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="type_label">
+          <property name="text">
+           <string>название сорта</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="roast_label">
+          <property name="text">
+           <string>степень обжарки</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="texture_label">
+          <property name="text">
+           <string>молотый/в зернах</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="taste_label">
+          <property name="text">
+           <string>описание вкуса</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="price_label">
+          <property name="text">
+           <string>цена</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="volume_label">
+          <property name="text">
+           <string>объем упаковки</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLineEdit" name="type"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="roast"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="texture"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="taste"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="price"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="volume"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="save_btn">
+      <property name="text">
+       <string>Сохранить</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>460</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,15 +1,16 @@
 import sqlite3
 import sys
 
-from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTableWidgetItem
+from main_ui import Ui_MainWindow as Ui_main
+from addEditCoffeeForm import Ui_MainWindow as Ui_form
 
 
-class Coffee(QMainWindow):
+class Coffee(QMainWindow, Ui_main):
     def __init__(self):
         super().__init__()
-        uic.loadUi('main.ui', self)
-        self.con = sqlite3.connect('coffee.sqlite')
+        self.setupUi(self)
+        self.con = sqlite3.connect('data/coffee.sqlite')
         self.manage = None
         self.add_btn.clicked.connect(self.add)
         self.edit_btn.clicked.connect(self.edit)
@@ -58,10 +59,10 @@ class Coffee(QMainWindow):
         self.con.close()
 
 
-class Manage(QMainWindow):
+class Manage(QMainWindow, Ui_form):
     def __init__(self, coffee, action, *data):
         super().__init__()
-        uic.loadUi('addEditCoffeeForm.ui', self)
+        self.setupUi(self)
         self.coffee, self.action = coffee, action
         roast = self.coffee.con.cursor().execute('SELECT roast FROM roasts').fetchall()
         self.roast.addItems([elem[0] for elem in roast])
